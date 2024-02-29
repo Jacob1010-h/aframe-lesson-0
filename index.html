@@ -16,7 +16,17 @@
             <img id="skybox" src="./BkeKM.jpg">
         </a-assets>
         
-        <a-entity geometry="primitive: box" material="src: #ringSpace;" position="-1 1.5 -3" rotation="0 45 0" dynamic-body></a-entity>
+        <a-entity 
+            geometry="primitive: box" 
+            material="src: #ringSpace;" 
+            position="-5 0.5 -10" 
+            rotation="0 45 0" 
+            scale="2 2 2" 
+            animation="property: position; to: 0 3 -4; loop: true; dur: 2000; easing: easeInOutSine"
+            dynamic-body
+        ></a-entity>
+        
+        
         <a-entity geometry="primitive: sphere; radius: 1.25" material="color: #EF2D5E" position="0 1.25 -10" dynamic-body>
             <a-entity geometry="primitive: ring" position="3 2 -4" rotation="0 45 0"></a-entity>
         </a-entity>
