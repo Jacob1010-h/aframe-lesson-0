@@ -6,11 +6,11 @@
     <meta name="description" content="Hello, WebVR! - A-Frame">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-motion-capture-components/dist/aframe-motion-capture-components.min.js"></script>
-    
+    <script src="./aframe-physics-system.js"></script>
 </head>
 
 <body>
-    <a-scene avatar-recorder>
+    <a-scene physics="gravity: -9.8" >
         <a-assets>
             <img id="ringSpace" src="./ring-space.png">
             <img id="skybox" src="./BkeKM.jpg">
@@ -23,11 +23,11 @@
         <a-torus-knot src="#ringSpace" position="3 3 -6"></a-torus-knot>
         <a-dodecahedron position="-2 3 -6"></a-dodecahedron>
         <a-cylinder position="-1.5 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>
         <a-sky src="#skybox" color="#ECECEC"></a-sky>
         <a-text value="My A-Frame Scene" align="center" position="0 3 -4" ></a-text>
+        <a-box dynamic-body position="-1.5 3 -3" width="1" height="1" depth="1"></a-box>
     </a-scene>
-    <button id="flush" onclick="document.querySelector('a-scene').flushToDOM(true);">Flush</button>
 </body>
 
 </html>
