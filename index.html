@@ -17,12 +17,12 @@
         </a-assets>
         
         <a-entity 
-            geometry="primitive: box" 
+            geometry="primitive: sphere" 
             material="src: #ringSpace;" 
             position="-5 0.5 -10" 
             rotation="0 45 0" 
             scale="2 2 2" 
-            animation="property: position; to: 0 3 -4; loop: true; dur: 2000; easing: easeInOutSine"
+            animation="property: position; from: -3 3 -4; to: 3 3 -4; loop: true; dir: alternate; dur: 2000;"
             dynamic-body
         ></a-entity>
         
