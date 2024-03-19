@@ -9,6 +9,7 @@
     <script src="./aframe-physics-system.js"></script>
     <script src="​https://ideaspacevr.github.io/aframe-particle-system-component/dist/aframe-particle-system-component.js"></script>
     <script src="./playground.js"></script>
+    <script src="./set-image.js"></script>
 </head>
 
 <body>
@@ -39,10 +40,20 @@
 
         <a-entity geometry="primitive: torusKnot" material="src: #ringSpace;" position="3 3 -6"></a-entity>
         <a-entity geometry="primitive: dodecahedron" position="-2 3 -6"></a-entity>
-        <a-entity geometry="primitive: cylinder" position="-1.5 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-entity>
+        <a-entity geometry="primitive: cylinder" cursor-listener position="-1.5 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-entity>
         
         <a-entity geometry="primitive: plane" material="color: #7BC8A4" position="0 0 -4" rotation="-90 0 0" static-body></a-entity>
         
+        <a-entity camera look-controls >
+            <a-entity cursor="fuse: true; fuseTimeout: 500"
+                position="0 0 -1"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                material="color: black; shader: flat">
+            </a-entity>
+        </a-entity>
+
+        
+
         <a-sky src="" color="#373737"></a-sky>
         <a-text value="My A-Frame Scene" align="center" position="0 3 -4" ></a-text>
         <a-box dynamic-body position="-1.5 3 -3" width="1" height="1" depth="1"></a-box>
